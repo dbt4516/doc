@@ -53,7 +53,7 @@ System.out.println(s1 == s4); //同样内容又都是intern的，地址相等。
 ##参考文档
 Java内存分代、基本GC策略及如何安装Visual GC插件（Oracle文档，基于JDK7）<br>
 http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html<br>
-Concurrent Mark Sweep、G1回收详解（写得非常好，图文并茂，而且是中文的，专题中的其他几篇也很值得一看）<br>
+详解Concurrent Mark Sweep、G1回收（图文并茂，而且是中文的，专题中的其他几篇也很值得一看）<br>
 http://www.jianshu.com/p/778dd3848196<br>
 Java内存分代简介<br>
 http://stackoverflow.com/questions/2070791/young-tenured-and-perm-generation<br>
