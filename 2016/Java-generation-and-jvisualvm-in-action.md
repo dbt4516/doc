@@ -57,5 +57,5 @@ Concurrent Mark Sweep、G1回收详解（写得非常好，图文并茂，而且
 http://www.jianshu.com/p/778dd3848196<br>
 Java内存分代简介<br>
 http://stackoverflow.com/questions/2070791/young-tenured-and-perm-generation<br>
-详解String#intern（来自美团技术点评团队，详细介绍了JDK6和7在该功能的区别，很值得一看）<br>
+详解String#intern（来自美团技术点评团队，详细介绍了JDK6和7在该功能的区别）<br>
 http://tech.meituan.com/in_depth_understanding_string_intern.html
