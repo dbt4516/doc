@@ -1,5 +1,5 @@
 ##1 分代
-Java中的内存分为三大块：年轻代（young generation）、老年代（old/tenured generation）和永生代（permanent generation）。其中年轻代分为三个小块，分别为Eden、S0和S1；而永生代是用来存储JVM运行时必须的内容的，不参与GC过程，一般由只由JVM操作，不受编程人员控制，但也有特例，将在本文最末作介绍。<br>
+Java中的内存分为三大块：年轻代（young generation）、老年代（old/tenured generation）和永生代（permanent generation）。其中年轻代分为三个小块，分别为Eden、S0和S1；而永生代是用来存储JVM运行时必须的内容的，一般由只由JVM操作，不受编程人员控制，但也有特例，将在本文最末作介绍。<br>
 简图如下：
 ![](https://github.com/dbt4516/doc/blob/master/2016/pic/Java-generation-and-jvisualvm-in-action-1.png.jpg)
 接下来用一个简单流程进行说明。
@@ -44,11 +44,11 @@ String s2 = "Test";
 String s3 = new String("Test");
 String s4 = s3.intern();
 System.out.println(s1 == s2); //用常量形式声明的字符串直接从永生代的字符常量池中引用，地址相等。true
-System.out.println(s2 == s3); //new出来的字符串在heap区，地址和永生代不相等。false
+System.out.println(s2 == s3); //new出来的字符串在应用堆区，地址和永生代不相等。false
 System.out.println(s3 == s4); //s4是intern的，在永生代，地址和s3不相等。false
 System.out.println(s1 == s4); //同样内容又都是intern的，地址相等。true
 ```
-在Java7之前，JVM字符串池位于永生代，因为永生代空间有限（默认仅4M），所以大量使用肯定是不行的。Java7已经将常量字符串池移动到了heap区。<br>
+在Java7之前，JVM字符串池位于永生代，因为永生代空间有限（默认仅4M），所以大量使用肯定是不行的。Java7已经将常量字符串池移动到了应用堆区。<br>
 
 ##参考文档
 Java内存分代、基本GC策略及如何安装Visual GC插件（Oracle文档，基于JDK7）<br>
