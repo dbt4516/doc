@@ -3,7 +3,6 @@ Alluxio大数据存储系统源自于UC Berkeley AMPLab，目前由Alluxio公司
 <br>
 > Alluxio, formerly Tachyon, enables any application to interact with any data from any storage system at memory speed.
 
-<br>
 ## 2 Alluxio的惊人之处
 * 世代关系（Lineage）：当任务失败时，启动重计算（re-computation）来重做。
 * 分布式，内存为中心，多级（内存+SSD+硬盘+HDFS）存储，重要的文件可以pin在内存中。省去手动冷热分离。
