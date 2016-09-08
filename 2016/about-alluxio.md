@@ -1,5 +1,5 @@
 ## 1 Alluxio是什么
-Alluxio大数据存储系统源自于UC Berkeley AMPLab，目前由Alluxio公司在开源社区主导开发。它是世界上第一个以内存为中心的分布式存储系统。
+Alluxio大数据存储系统源自于UC Berkeley AMPLab，目前由Alluxio公司在开源社区主导开发。它是世界上第一个以内存为中心的分布式存储系统。<br>
 <br>
 ## 2 Alluxio有何惊人之处
 * 世代关系（Lineage）：当任务失败时，启动重计算（re-computation）来重做。
