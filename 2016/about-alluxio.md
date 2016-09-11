@@ -23,4 +23,7 @@ Alluxio大数据存储系统源自于UC Berkeley AMPLab，目前由Alluxio公司
 目前，去哪儿网的流处理流水线每天需要处理的业务日志量大约60亿条，总计约4.5TB的数据量。处理逻辑大致为 数据源 -> kafka -> Spark streaming -> HDFS。遇到的主要问题是HDFS在远程集群，网络时延大，且本身HDFS也是基于磁盘IO，速度无法与内存相比；Spark为了提高计算速度将大量内容载入Executor的JVM，导致GC压力大。
 #### 4.1.2 解决方案
 保持原有流程不变，将核心存储由HDFS替换为Alluxio，并与计算节点部署在一起，HDFS仅作为备份。优化结果：Spark在读取文件时达到内存速度，且不再需要已MEMORY_ONLY的模式运行，缓解了本身JVM的GC压力。将生产环境中整个流处理流水线的性能总体提高了近10倍，峰值时甚至达到300倍左右。
-### 4.2 百度
+### 4.2 百度基础查询优化
+#### 4.2.1 项目背景
+百度的数据存储节点分散于全球各地，查询时网络压力大。
+> Since the data was distributed over multiple data centers, it was highly likely that a query would need to transfer data from a remote data center to the compute data center — this is what caused the biggest delay when a user ran a query. 
