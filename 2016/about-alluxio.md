@@ -25,5 +25,5 @@ Alluxio大数据存储系统源自于UC Berkeley AMPLab，目前由Alluxio公司
 保持原有流程不变，将核心存储由HDFS替换为Alluxio，并与计算节点部署在一起，HDFS仅作为备份。优化结果：Spark在读取文件时达到内存速度，且不再需要已MEMORY_ONLY的模式运行，缓解了本身JVM的GC压力。将生产环境中整个流处理流水线的性能总体提高了近10倍，峰值时甚至达到300倍左右。
 ### 4.2 百度基础查询优化
 #### 4.2.1 项目背景
-百度的数据存储节点分散于全球各地，查询时网络压力大。
+百度的数据存储节点分散于全球各地，网络吞吐能力成为查询时的最大瓶颈。希望能将热数据直接存放在计算节点的内存中。
 > Since the data was distributed over multiple data centers, it was highly likely that a query would need to transfer data from a remote data center to the compute data center — this is what caused the biggest delay when a user ran a query. 
