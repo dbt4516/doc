@@ -27,5 +27,6 @@ Alluxio大数据存储系统源自于UC Berkeley AMPLab，目前由Alluxio公司
 #### 4.2.1 项目背景
 百度的数据存储节点分散于全球各地，网络吞吐能力成为查询时的最大瓶颈。希望能将热数据直接存放在计算节点的内存中。
 > Since the data was distributed over multiple data centers, it was highly likely that a query would need to transfer data from a remote data center to the compute data center — this is what caused the biggest delay when a user ran a query. 
+
 #### 4.2.2 解决方案
 Alluxio worker部署到计算节点上，用户发起的请求到达计算节点时，先检查本地的Alluxio是否有所需数据，如果未命中则向HDFS数据仓库请求，并将其缓存进本地的Alluxio。这样的结构比原始的Hive查询快30倍，比切换为Spark SQL查询后快5倍。并且该套方案运行一年余都非常稳定。百度已建立全球最大Alluxio集群。
