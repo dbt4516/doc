@@ -39,7 +39,7 @@ Alluxio worker部署到计算节点上，用户发起的请求到达计算节点
 <br>
 ## 5 其他
 命令十分直白。<br>
-![](https://github.com/dbt4516/doc/blob/master/2016/pic/about-alluxio-1.png)
+![](https://github.com/dbt4516/doc/blob/master/2016/pic/about-alluxio-1.png)<br>
 除了命令行工具和Java调用外，Alluxio的webUI也已很完善（直接浏览目录、查看文件内容、各种配置、worker运行情况、看日志、哪些内容pin在内存里等），一点都不像一个才做了三年的开源项目。不少文章也指出虽然这个开源项目非常新，但却获得了大量厂商的关注，其项目成长速度远远超过Hadoop、Spark等Apache顶级项目在初始阶段的速度。可见业界对自动分级存储、统一接口的需求已经非常强烈。<br><br>
 ## 6 参考文档
 官网<br>
