@@ -3,6 +3,7 @@ Alluxio大数据存储系统源自于UC Berkeley AMPLab，目前由Alluxio公司
 <br>
 > Alluxio, formerly Tachyon, enables any application to interact with any data from any storage system at memory speed.
 
+<br>
 ## 2 Alluxio的惊人之处
 * 世代关系（Lineage）：当任务失败时，启动重计算（re-computation）来重做。
 * 分布式，内存为中心，多级（内存+SSD+硬盘+HDFS）存储（调度策略有LFU、LRU等），重要的文件可以pin在内存中。省去手动冷热分离。
@@ -33,9 +34,9 @@ Alluxio大数据存储系统源自于UC Berkeley AMPLab，目前由Alluxio公司
 Alluxio worker部署到计算节点上，用户发起的请求到达计算节点时，先检查本地的Alluxio是否有所需数据，如果未命中则向HDFS数据仓库请求，并将其缓存进本地的Alluxio。这样的结构比原始的Hive查询快30倍，比切换为Spark SQL查询后快5倍。并且该套方案运行一年余都非常稳定。百度已建立全球最大Alluxio集群。
 ### 4.3 实例总结
 两个case的背景都有跨机房数据传输的问题，解决方案中都可以看到将存储节点和计算节点布置到一起的做法，其中Qunar是直接把HDFS换成了Alluxio，百度则是将Alluxio作为计算节点上的数据缓存。Qunar将原本在分析层管理的缓存剥离到存储层进行管理的思路具有启发性。<br>
-
+<br>
 ## 5 其他
-Alluxio的webUI已很完善（直接浏览目录、查看文件内容、各种配置、worker运行情况、看日志、哪些内容pin在内存里等），一点都不像一个才做了三年的开源项目。不少文章也指出虽然这个开源项目非常新，但却获得了大量厂商的关注，其项目成长速度远远超过Hadoop、Spark等Apache顶级项目在初始阶段的速度。可见业界对自动分级存储、统一接口的需求已经非常强烈。<br>
+Alluxio的webUI已很完善（直接浏览目录、查看文件内容、各种配置、worker运行情况、看日志、哪些内容pin在内存里等），一点都不像一个才做了三年的开源项目。不少文章也指出虽然这个开源项目非常新，但却获得了大量厂商的关注，其项目成长速度远远超过Hadoop、Spark等Apache顶级项目在初始阶段的速度。可见业界对自动分级存储、统一接口的需求已经非常强烈。<br><br>
 ## 6 参考文档
 官网<br>
 http://www.alluxio.org/<br>
