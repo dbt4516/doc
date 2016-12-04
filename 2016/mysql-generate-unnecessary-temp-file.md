@@ -72,3 +72,7 @@ http://dev.mysql.com/doc/refman/5.5/en/explain-output.html<br>
 http://www.fromdual.com/beware-of-large-mysql-max-sort-length-parameter<br>
 说服Mysql优化器使用索引的7中办法（挺有创意）<br>
 http://code.openark.org/blog/mysql/7-ways-to-convince-mysql-to-use-the-right-index<br>
+<br>
+
+hongzhan<br>
+2016-12-04<br>
