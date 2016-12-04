@@ -68,9 +68,9 @@ Mysql的索引提示说明<br>
 http://dev.mysql.com/doc/refman/5.7/en/index-hints.html<br>
 Mysql执行计划输出说明<br>
 http://dev.mysql.com/doc/refman/5.5/en/explain-output.html<br>
-一个现象十分相似的案例，但原因不同<br>
+一个现象十分相似的案例，但原因不同（需翻墙阅读）<br>
 http://www.fromdual.com/beware-of-large-mysql-max-sort-length-parameter<br>
-说服Mysql优化器使用索引的7中办法（挺有创意）<br>
+说服Mysql优化器使用索引的7种办法（挺有创意）<br>
 http://code.openark.org/blog/mysql/7-ways-to-convince-mysql-to-use-the-right-index<br>
 <br>
 
