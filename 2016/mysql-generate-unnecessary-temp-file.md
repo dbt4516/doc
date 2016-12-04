@@ -61,14 +61,14 @@ Original和modified算法的差异在于，original在排序时只将order by子
 
 ## 7 参考材料
 Mysql对limit子句的优化措施<br>
-http://dev.mysql.com/doc/refman/5.5/en/limit-optimization.html
+http://dev.mysql.com/doc/refman/5.5/en/limit-optimization.html<br>
 Mysql的排序策略<br>
-http://dev.mysql.com/doc/refman/5.7/en/order-by-optimization.html
+http://dev.mysql.com/doc/refman/5.7/en/order-by-optimization.html<br>
 Mysql的索引提示说明<br>
-http://dev.mysql.com/doc/refman/5.7/en/index-hints.html
+http://dev.mysql.com/doc/refman/5.7/en/index-hints.html<br>
 Mysql执行计划输出说明<br>
-http://dev.mysql.com/doc/refman/5.5/en/explain-output.html
+http://dev.mysql.com/doc/refman/5.5/en/explain-output.html<br>
 一个现象十分相似的案例，但原因不同<br>
-http://www.fromdual.com/beware-of-large-mysql-max-sort-length-parameter
+http://www.fromdual.com/beware-of-large-mysql-max-sort-length-parameter<br>
 说服Mysql优化器使用索引的7中办法（挺有创意）<br>
-http://code.openark.org/blog/mysql/7-ways-to-convince-mysql-to-use-the-right-index
+http://code.openark.org/blog/mysql/7-ways-to-convince-mysql-to-use-the-right-index<br>
